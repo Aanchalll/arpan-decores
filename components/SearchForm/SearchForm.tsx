@@ -32,31 +32,31 @@ export default function SearchForm() {
     setOpen(true);
   }
 
-  useEffect(() => {
-    if (!isFetching) return;
-    const fetchData = async () => {
-      const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_PROD_BACKEND_URL}/api/v1/products/search?q=${searchValue}`
-      );
-      const fetchedProducts: apiProductsType[] = res.data.data.map(
-        (product: apiProductsType) => ({
-          ...product,
-          img1: product.image1,
-          img2: product.image2,
-        })
-      );
-      if (fetchedProducts.length < 1) setNoResult(true);
-      fetchedProducts.map((product, index) => {
-        if (index < 4) {
-          setSearchItems((prevProduct) => [...prevProduct, product]);
-        } else {
-          setMoreThanFour(true);
-        }
-      });
-      setIsFetching(false);
-    };
-    fetchData();
-  }, [isFetching, searchValue]);
+  // useEffect(() => {
+  //   if (!isFetching) return;
+  //   const fetchData = async () => {
+  //     const res = await axios.get(
+  //       `${process.env.NEXT_PUBLIC_PROD_BACKEND_URL}/api/v1/products/search?q=${searchValue}`
+  //     );
+  //     const fetchedProducts: apiProductsType[] = res.data.data.map(
+  //       (product: apiProductsType) => ({
+  //         ...product,
+  //         img1: product.image1,
+  //         img2: product.image2,
+  //       })
+  //     );
+  //     if (fetchedProducts.length < 1) setNoResult(true);
+  //     fetchedProducts.map((product, index) => {
+  //       if (index < 4) {
+  //         setSearchItems((prevProduct) => [...prevProduct, product]);
+  //       } else {
+  //         setMoreThanFour(true);
+  //       }
+  //     });
+  //     setIsFetching(false);
+  //   };
+  //   fetchData();
+  // }, [isFetching, searchValue]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
