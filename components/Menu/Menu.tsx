@@ -90,7 +90,7 @@ export default function Menu() {
                     <a>
                       <Image
                         className="justify-center"
-                        src="/logo.svg"
+                        src="/logo1.png"
                         alt="Picture of the author"
                         width={85}
                         height={22}
@@ -287,14 +287,14 @@ export default function Menu() {
                       <a
                         href="#"
                         className="text-gray400 w-10 h-10 py-1 px-auto flex justify-center rounded-md active:bg-gray300"
-                        aria-label="Haru Fashion Facebook Page"
+                        aria-label="Arpan Decores Facebook Page"
                       >
                         <FacebookLogo extraClass="h-8" />
                       </a>
                       <a
                         href="#"
                         className="text-gray400 w-10 h-10 py-1 px-auto flex justify-center rounded-md active:bg-gray300"
-                        aria-label="Haru Fashion Facebook Page"
+                        aria-label="Arpan Decores Facebook Page"
                       >
                         <InstagramLogo extraClass="h-8" />
                       </a>

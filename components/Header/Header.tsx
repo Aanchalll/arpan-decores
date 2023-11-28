@@ -123,7 +123,7 @@ const Header: React.FC<Props> = ({ title }) => {
                   <a>
                     <Image
                       className="justify-center"
-                      src="/logo.svg"
+                      src="/logo1.png"
                       alt="Picture of the author"
                       width={220}
                       height={50}

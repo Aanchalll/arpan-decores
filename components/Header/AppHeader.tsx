@@ -7,14 +7,14 @@ type Props = {
   keywords?: string;
 };
 
-// "Discover affordable and fashionable men's and women's clothing online at Haru Fashion. Free Returns ✓ 1000+ New Arrivals Dropped Daily."
+// "Arpan Decores"
 const defaultDesc =
-  "Haru Fashion e-commerce developed with Next.JS. Coded with 🖤 by Sat Naing (satnaing.dev).";
+  "Arpan Decores: Experience magic with your Interiors ";
 const defaultKeywords =
-  "Haru Fashion, Online Shop, E-commerce, Sat Naing, NextJS";
+  "Arpan Decores, Bhilai interior designing, bhilai, cnc cutting bhilai, customized gifts";
 
 const AppHeader: React.FC<Props> = ({
-  title = "Haru Fashion",
+  title = "Arpan Decores",
   desc = defaultDesc,
   keywords = defaultKeywords,
 }) => {

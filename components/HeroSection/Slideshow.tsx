@@ -16,32 +16,37 @@ SwiperCore.use([Pagination, Navigation, Autoplay]);
 const sliders = [
   {
     id: 2,
-    image: "/bg-img/curly_hair_girl-1.jpg",
+    // image: "/bg-img/curly_hair_girl-1.jpg",
+    image: "/bg-img/girl-single.jpg ",
     imageTablet: "/bg-img/curly_hair_girl-1-tablet.png",
-    imageMobile: "/bg-img/curly_hair_girl-1_mobile.jpg",
-    subtitle: "50% off",
-    titleUp: "New Cocktail",
-    titleDown: "Dresses",
-    rightText: false,
+    // imageMobile: "/bg-img/curly_hair_girl-1_mobile.jpg",
+    imageMobile: "/bg-img/girl-cutting-mobile.jpeg",
+    subtitle: "Experience Magical",
+    titleUp: "Interiors",
+    titleDown: "",
+    rightText: true,
   },
   {
     id: 1,
-    image: "/bg-img/curly_hair_white-1.jpg",
+    // image: "/bg-img/curly_hair_white-1.jpg",
+    image: "/bg-img/img1.jpeg",
     imageTablet: "/bg-img/curly_hair_white-1-tablet.png",
-    imageMobile: "/bg-img/curly_hair_white-1_mobile.jpg",
-    subtitle: "Spring Revolution",
-    titleUp: "Night Summer",
-    titleDown: "Dresses",
+    imageMobile: "/bg-img/gold-cutting-mobile.jpeg",
+    subtitle: "Experience Magical",
+    titleUp: "Interiors",
+    titleDown: "",
     rightText: true,
   },
   {
     id: 3,
-    image: "/bg-img/monigote.jpg",
+    // image: "/bg-img/monigote.jpg",
+    image: "/bg-img/gold-cutting.jpeg",
+    
     imageTablet: "/bg-img/monigote-tablet.png",
-    imageMobile: "/bg-img/monigote_mobile.jpg",
-    subtitle: "Spring promo",
-    titleUp: "The Weekend",
-    titleDown: "Promotions",
+    imageMobile: "/bg-img/girl-single-mobile.jpeg",
+    subtitle: "Experience Magical",//"Spring promo",
+    titleUp: "Interiors",//"The Weekend",
+    titleDown: "",//"Promotions",
     rightText: false,
   },
 ];
@@ -113,7 +118,7 @@ const Slideshow = () => {
                   {slider.titleUp} <br />
                   {slider.titleDown}
                 </span>
-                <TextButton value={t("shop_now")} />
+                {/* <TextButton value={t("shop_now")} /> */}
               </div>
             </SwiperSlide>
           ))}

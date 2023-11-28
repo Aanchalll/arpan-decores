@@ -64,7 +64,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center pb-16">
+      {/* <div className="flex flex-col items-center pb-16">
         <h4 className="text-3xl mb-4">{t("newsletter")}</h4>
         <span className="px-6 text-center">{t("newsletter_desc")}</span>
         <div className="mt-5 px-6 flex w-full sm:w-auto flex-col sm:flex-row">
@@ -80,7 +80,7 @@ export default function Footer() {
             extraClass="ml-0 mt-4 sm:mt-0 tracking-widest sm:tracking-normal sm:mt-0 sm:ml-4 w-auto w-full sm:w-auto"
           />
         </div>
-      </div>
+      </div> */}
       <div className={styles.bottomFooter}>
         <div className="app-max-width app-x-padding w-full flex justify-between">
           <span className="">@2022 Haru. {t("all_rights_reserved")}</span>
@@ -90,13 +90,13 @@ export default function Footer() {
             </span>{" "}
             <a
               href="www.facebook.com"
-              aria-label="Facebook Page for Haru Fashion"
+              aria-label="Facebook Page for Arpan Decores"
             >
               <FacebookLogo />
             </a>
             <a
               href="www.ig.com"
-              aria-label="Instagram Account for Haru Fashion"
+              aria-label="Instagram Account for Arpan Decores"
             >
               <InstagramLogo />
             </a>

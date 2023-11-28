@@ -94,7 +94,7 @@
     "email_already_exists": "Email already exists",
     "error_occurs": "An error occurs",
     "email_address": "Email Address",
-    "form_note": "Note! By submitting this form, you will automatically sign up for Haru Fashion Shop",
+    "form_note": "Note! By submitting this form, you will automatically sign up for Arpan Decores",
 
     "thank_you_note": "Thank you. We receive your order",
     "order_id": "Order ID",
@@ -134,9 +134,9 @@
   },
   "Category": {
     "home": "Home",
-    "men": "Men",
-    "women": "Women",
-    "bags": "Bags",
+    "men": "Metals",
+    "women": "Woods",
+    "bags": "Art",
     "new-arrivals": "New Arrivals",
     "filter_by": "Filter by",
     "sort_by": "Sort by",
