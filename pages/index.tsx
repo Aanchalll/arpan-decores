@@ -79,23 +79,23 @@ const Home: React.FC<Props> = ({ products }) => {
       </section> */}
 
       {/* ===== Our Shop Intro Section */}
-      <main id="main-content" className="-mt-20">
+      <main id="about-us" className="-mt-20">
         <section className="app-max-width mt-16 mb-20 flex flex-col justify-center items-center text-center">
           <div className="textBox w-3/4 md:w-2/4 lg:w-2/5 mb-6">
-            <h5 className="text-sm mb-1 italic translate-x-6">{t("arpan_decores")}</h5>
-            <h2 className="text-3xl mb-6  translate-x-6">{t("about_us")}</h2>
-            <span className="w-full">{t("our_shop_desc")}</span>
+            {/* <h5 className="text-sm mb-1 text-silver translate-x-6">{t("arpan_decores")}</h5> */}
+            <h2 className="text-3xl mb-6 text-gold italic translate-x-6">{t("about_us")}</h2>
+            <span className="w-full  text-gold">{t("our_shop_desc")}</span>
           </div>
-          <div className="w-full app-x-padding flex justify-center">
+          <div  className="w-full app-x-padding flex justify-center">
             <Image src={ourShop} alt="Our Shop" />
           </div>
         </section>
 
         {/* ===== Category Section ===== */}
-        <section className="w-full h-auto py-10 border border-b-2 border-gray100">
+        <section id='products' className="w-full h-auto py-10 border border-b-2 border-gray100">
         <div className="textBox lg:w-full mb-6 text-center">
-            <h2 className="text-3xl w-full  mb-6 italic translate-x-6">{t("our_products")}</h2>
-            <span className="w-full">{t("prod_desc")}</span>
+            <h2 className="text-gold text-3xl w-full  mb-6 italic translate-x-6">{t("our_products")}</h2>
+            <span className="w-full text-gold">{t("prod_desc")}</span>
           </div>
           <div className="app-max-width app-x-padding h-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="w-full sm:col-span-2 lg:col-span-2">
@@ -162,8 +162,8 @@ const Home: React.FC<Props> = ({ products }) => {
         </section> */}
 
         {/* ===== Testimonial Section ===== */}
-        <section className="w-full hidden h-full py-16 md:flex flex-col items-center bg-lightgreen">
-          <h2 className="text-3xl">{t("testimonial")}</h2>
+        <section id="testimonials" className="w-full hidden h-full py-16 md:flex flex-col items-center ">
+          <h2 className="text-3xl text-gold">{t("testimonial")}</h2>
           <TestiSlider />
         </section>
 

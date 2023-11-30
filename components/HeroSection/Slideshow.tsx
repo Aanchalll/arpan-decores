@@ -109,9 +109,10 @@ const Slideshow = () => {
                     : styles.leftTextSection
                 }
               >
-                <span className={styles.subtitle}>{slider.subtitle}</span>
+                {/* <span className={styles.subtitle}>{slider.subtitle}</span> */}
+                <span className="text-gold">{slider.subtitle}</span>
                 <span
-                  className={`${styles.title} text-center ${
+                  className={`${styles.title} text-center text-gold ${
                     slider.rightText ? "sm:text-right" : "sm:text-left"
                   }`}
                 >

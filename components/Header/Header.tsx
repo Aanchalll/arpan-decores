@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import InstagramLogo from "../../public/icons/InstagramLogo";
 
 // import TopNav from "./TopNav";
 import WhistlistIcon from "../../public/icons/WhistlistIcon";
@@ -93,13 +94,16 @@ const Header: React.FC<Props> = ({ title }) => {
             </div>
 
             {/* Left Nav */}
-            <ul className={`flex-0 lg:flex-1 flex ${styles.leftMenu}`}>
+            <ul
+              className={`flex-0 text-gold lg:flex-1 flex ${styles.leftMenu}`}
+            >
               <li>
-                <Link href={`/product-category/men`}>
-                  <a>{t("men")}</a>
+                <Link href={`#`}>
+                  {/* <a>{t("men")}</a> */}
+                  Arpan Decores
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href={`/product-category/women`}>
                   <a>{t("women")}</a>
                 </Link>
@@ -113,14 +117,16 @@ const Header: React.FC<Props> = ({ title }) => {
                 <Link href="/coming-soon">
                   <a>{t("blogs")}</a>
                 </Link>
-              </li>
+              </li> */}
             </ul>
 
             {/*  Logo */}
             <div className="flex-1 flex justify-center items-center cursor-pointer">
-              <div className="w-32 h-auto">
+              <div className="w-32 h-auto text-gold">
                 <Link href="/">
-                  <a> A D
+                  <a>
+                    {" "}
+                    
                     {/* <Image
                       className="justify-center"
                       src="/logo1.png"
@@ -136,17 +142,34 @@ const Header: React.FC<Props> = ({ title }) => {
 
             {/* Right Nav */}
             <ul className={`flex-1 flex justify-end ${styles.rightMenu}`}>
-              <li>
-                <SearchForm />
+              <li className="text-gold">
+                {/* href={`/product-category/men`} */}
+                <Link href={`#about-us`}>
+                  <a>{t("about_us")}</a>
+                </Link>
               </li>
-              <li>
+              <li className="text-gold">
+                {/* href={`/product-category/men`} */}
+                <Link href={`#products`}>
+                  <a>{t("products")}</a>
+                </Link>
+              </li>
+              {/* <li>
+                <SearchForm />
+              </li> */}
+              {/* <li className="">
+                <a href="#" aria-label="Arpan Decores Instagram Account">
+                  <InstagramLogo />
+                </a>
+              </li> */}
+              {/* <li>
                 <AuthForm>
                   <UserIcon />
                 </AuthForm>
               </li>
               <li>
                 <Link href="/wishlist" passHref>
-                  {/* <a className="relative" aria-label="Wishlist"> */}
+                  {/* <a className="relative" aria-label="Wishlist"> 
                   <button
                     type="button"
                     className="relative"
@@ -161,12 +184,12 @@ const Header: React.FC<Props> = ({ title }) => {
                       </span>
                     )}
                   </button>
-                  {/* </a> */}
+                  {/* </a> 
                 </Link>
               </li>
               <li>
                 <CartItem />
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

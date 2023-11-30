@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  background-color: #1e1c1c;
 }
 
 .swiper-button-prev::after,
@@ -49,3 +50,27 @@ html {
   width: 100% !important;
   margin: auto !important;
 } */
+
+
+
+
+.text-gold {
+  /* font-size: 36px; */
+  /* font-weight: bold; */
+  color: transparent; /* Make text transparent */
+  background-image: url('/bg-img/gold-bg.jpeg'); /* Replace with your image path */
+  background-size: cover; /* Adjust as needed */
+  -webkit-background-clip: text; /* Clip text to the background */
+  background-clip: text;
+}
+
+/* silver-bg */
+.text-silver {
+  /* font-size: 36px; */
+  /* font-weight: bold; */
+  color: transparent; /* Make text transparent */
+  background-image: url('/bg-img/silver-bg.jpeg'); /* Replace with your image path */
+  background-size: cover; /* Adjust as needed */
+  -webkit-background-clip: text; /* Clip text to the background */
+  background-clip: text;
+}

@@ -63,7 +63,7 @@ const TestiSlider: FC = () => {
             index === arrIndex && (
               <div
                 key={ti.name}
-                className={`h-full flex flex-col items-center justify-center animate__animated ${animate}`}
+                className={`text-gold h-full flex flex-col items-center justify-center animate__animated ${animate}`}
                 style={{ width: "700px" }}
               >
                 <div className="textiContainer text-center w-3/4">
