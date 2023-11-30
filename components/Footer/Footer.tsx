@@ -19,15 +19,15 @@ export default function Footer() {
             <div className={styles.column}>
               <a href="example">{t("about_us")}</a>
               <a href="example">{t("contact_us")}</a>
-              <a href="example">{t("store_location")}</a>
-              <a href="example">{t("careers")}</a>
+              {/* <a href="example">{t("store_location")}</a> */}
+              {/* <a href="example">{t("careers")}</a> */}
             </div>
           </div>
           <div>
             <h3 className={styles.footerHead}>{t("help")}</h3>
             <div className={styles.column}>
-              <a href="example">{t("order_tracking")}</a>
-              <a href="example">{t("faqs")}</a>
+              {/* <a href="example">{t("order_tracking")}</a> */}
+              {/* <a href="example">{t("faqs")}</a> */}
               <a href="example">{t("privacy_policy")}</a>
               <a href="example">{t("terms_conditions")}</a>
             </div>
@@ -36,10 +36,15 @@ export default function Footer() {
             <h3 className={styles.footerHead}>{t("store")}</h3>
             <div className={styles.column}>
               <Link href={`/product-category/women`}>
-                <a>{t("women")}</a>
+                <a>
+                  {/* {t("women")} */}
+                  
+                  </a>
               </Link>
               <Link href={`/product-category/men`}>
-                <a>{t("men")}</a>
+                <a>
+                  {/* {t("men")} */}
+                  </a>
               </Link>
               <Link href={`/product-category/bags`}>
                 <a>{t("bags")}</a>
@@ -83,7 +88,7 @@ export default function Footer() {
       </div> */}
       <div className={styles.bottomFooter}>
         <div className="app-max-width app-x-padding w-full flex justify-between">
-          <span className="">@2022 Haru. {t("all_rights_reserved")}</span>
+          <span className="">@2023 AD {t("all_rights_reserved")}</span>
           <span className="flex items-center">
             <span className="hidden sm:block">
               {t("follow_us_on_social_media")}:

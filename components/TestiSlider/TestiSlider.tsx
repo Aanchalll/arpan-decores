@@ -7,7 +7,7 @@ const testi = [
     speech:
       "Lorem ipsum dolor sit, amet consectetur rro fuga minima necessitatibus repellendus. Veniam suscipit excepturi rem aliquam officiis.",
     name: "David",
-    occupation: "Social Influencer",
+    occupation: "Dhillon Owner",
   },
   {
     speech:

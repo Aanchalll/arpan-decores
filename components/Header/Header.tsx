@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import TopNav from "./TopNav";
+// import TopNav from "./TopNav";
 import WhistlistIcon from "../../public/icons/WhistlistIcon";
 import UserIcon from "../../public/icons/UserIcon";
 import AuthForm from "../Auth/AuthForm";
@@ -75,7 +75,7 @@ const Header: React.FC<Props> = ({ title }) => {
       </a>
 
       {/* ===== Top Navigation ===== */}
-      <TopNav />
+      {/* <TopNav /> */}
 
       {/* ===== Main Navigation ===== */}
       <nav
@@ -116,19 +116,19 @@ const Header: React.FC<Props> = ({ title }) => {
               </li>
             </ul>
 
-            {/* Haru Logo */}
+            {/*  Logo */}
             <div className="flex-1 flex justify-center items-center cursor-pointer">
               <div className="w-32 h-auto">
                 <Link href="/">
-                  <a>
-                    <Image
+                  <a> A D
+                    {/* <Image
                       className="justify-center"
                       src="/logo1.png"
                       alt="Picture of the author"
                       width={220}
                       height={50}
                       layout="responsive"
-                    />
+                    /> */}
                   </a>
                 </Link>
               </div>
