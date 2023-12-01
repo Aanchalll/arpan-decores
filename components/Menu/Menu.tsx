@@ -289,6 +289,7 @@ export default function Menu() {
                         href={t("facebook-link")}
                         aria-label="Facebook Page for Arpan Decores"
                         target="_blank"
+                        rel="noreferrer"
                         className="text-gray300 w-10 h-10 py-1 px-auto flex justify-center rounded-md active:bg-gray300"
                       >
                         <FacebookLogo extraClass="h-8" />
@@ -297,6 +298,7 @@ export default function Menu() {
                         href={t("instagram_link")}
                         aria-label="Instagram Account for Arpan Decores"
                         target="_blank"
+                        rel="noreferrer"
                         className="text-gray300 w-10 h-10 py-1 px-auto flex justify-center rounded-md active:bg-gray300"
                       >
                         <InstagramLogo extraClass="h-8" />
