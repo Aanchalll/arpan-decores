@@ -11,6 +11,7 @@ import Card from "../../components/Card/Card";
 import Pagination from "../../components/Util/Pagination";
 import { apiProductsType, itemType } from "../../context/cart/cart-types";
 import DownArrow from "../../public/icons/DownArrow";
+import NoDataFound from "../no-data";
 
 type OrderType = "latest" | "price" | "price-desc";
 
@@ -39,7 +40,7 @@ const ProductCategory: React.FC<Props> = ({
 
   const firstIndex = page === 1 ? page : page * 10 - 9;
   const lastIndex = page * 10;
-
+  // console.log(category, "======", items);
   return (
     <div>
       {/* ===== Head Section ===== */}
@@ -47,40 +48,52 @@ const ProductCategory: React.FC<Props> = ({
 
       <main id="main-content">
         {/* ===== Breadcrumb Section ===== */}
-        <div className="bg-lightgreen h-16 w-full flex items-center">
+        <div className=" text-silver h-16 w-full flex items-center">
           <div className="app-x-padding app-max-width w-full">
             <div className="breadcrumb">
               <Link href="/">
-                <a className="text-gray400">{t("home")}</a>
+                <a className=" text-silver">{t("home")}</a>
               </Link>{" "}
-              / <span className="capitalize">{t(category as string)}</span>
+              / <span className="capitalize ">{t(category as string)}</span>
             </div>
           </div>
         </div>
 
         {/* ===== Heading & Filter Section ===== */}
         <div className="app-x-padding app-max-width w-full mt-8">
-          <h3 className="text-4xl mb-2 capitalize">{t(category as string)}</h3>
+          <h3 className="text-4xl text-gold mb-2 capitalize">
+            {t(category as string)}
+          </h3>
           <div className="flex flex-col-reverse sm:flex-row gap-4 sm:gap-0 justify-between mt-4 sm:mt-6">
-            <span>
-              {t("showing_from_to", {
-                from: firstIndex,
-                to: numberOfProducts < lastIndex ? numberOfProducts : lastIndex,
-                all: numberOfProducts,
-              })}
-            </span>
-            {category !== "new-arrivals" && <SortMenu orderby={orderby} />}
+            {items && items?.length > 0 && (
+              <span>
+                {t("showing_from_to", {
+                  from: firstIndex,
+                  to:
+                    numberOfProducts < lastIndex ? numberOfProducts : lastIndex,
+                  all: numberOfProducts,
+                })}
+              </span>
+            )}
+            {category !== "new-arrivals" && items && items?.length > 0 && (
+              <SortMenu orderby={orderby} />
+            )}
           </div>
         </div>
 
         {/* ===== Main Content Section ===== */}
         <div className="app-x-padding app-max-width mt-3 mb-14">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-4 gap-y-10 sm:gap-y-6 mb-10">
-            {items.map((item) => (
-              <Card key={item.id} item={item} />
-            ))}
-          </div>
-          {category !== "new-arrivals" && (
+          {items ? (
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-4 gap-y-10 sm:gap-y-6 mb-10">
+              {items?.map((item) => (
+                <Card key={item.id} item={item} />
+              ))}
+            </div>
+          ) : (
+            <NoDataFound />
+          )}
+
+          {category !== "new-arrivals" && items && items?.length > 0 && (
             <Pagination
               currentPage={page}
               lastPage={lastPage}
@@ -108,10 +121,12 @@ export const getServerSideProps: GetServerSideProps = async ({
   let numberOfProducts = 0;
 
   if (paramCategory !== "new-arrivals") {
-    const numberOfProductsResponse = await axios.get(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/products/count?category=${paramCategory}`
-    );
-    numberOfProducts = +numberOfProductsResponse.data.count;
+    // const numberOfProductsResponse =
+    // await axios.get(
+    //   `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/products/count?category=${paramCategory}`
+    // );
+    numberOfProducts = 0;
+    // +numberOfProductsResponse.data.count;
   } else {
     numberOfProducts = 10;
   }
@@ -131,23 +146,23 @@ export const getServerSideProps: GetServerSideProps = async ({
       ? `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/products?order_by=createdAt.desc&limit=10`
       : `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/products?order_by=${order_by}&offset=${start}&limit=10&category=${paramCategory}`;
 
-  const res = await axios.get(reqUrl);
+  // const res = await axios.get(reqUrl);
 
-  const fetchedProducts = res.data.data.map((product: apiProductsType) => ({
-    ...product,
-    img1: product.image1,
-    img2: product.image2,
-  }));
+  // const fetchedProducts = res.data.data.map((product: apiProductsType) => ({
+  //   ...product,
+  //   img1: product.image1,
+  //   img2: product.image2,
+  // }));
 
-  let items: apiProductsType[] = [];
-  fetchedProducts.forEach((product: apiProductsType) => {
-    items.push(product);
-  });
+  // let items: apiProductsType[] = [];
+  // fetchedProducts.forEach((product: apiProductsType) => {
+  //   items.push(product);
+  // });
 
   return {
     props: {
       messages: (await import(`../../messages/common/${locale}.json`)).default,
-      items,
+      // items,
       numberOfProducts,
       page: +page,
       orderby,
