@@ -25,7 +25,8 @@
     "store": "Store",
     "keep_in_touch": "Keep In Touch",
     "about_us": "About Us",
-    "contact_us": "Contact Us",
+    "arpan_decores": "Arpan Decores",
+    "contact_us": "Let's Connect!",
     "our_policy": "Our Policy",
     "store_location": "Store Location",
     "order_tracking": "Order Tracking",
@@ -33,13 +34,16 @@
     "privacy_policy": "Privacy Policy",
     "terms_conditions": "Terms & Conditions",
     "search_anything": "Search anything ...",
-    "address_full": "No(7), Ground Floor, Malikha Building, Yadanar Road, Thingangyun, Yangon",
+    "address_full": "Block 18 Plot, 11, Nehru Nagar East, Bhilai, Chhattisgarh 490020",
     "address": {
-      "detail": "No(7), Ground Floor,",
-      "road": "Malikha Building, Yadanar Road,",
-      "city": "Thingangyun, Yangon"
+      "detail": "Block 18 Plot, 11, Nehru Nagar East,",
+      "road": "Bhilai, Chhattisgarh, 490020.",
+      "city": ""
     },
-    "phone_number": "+95 95 096 051",
+    "facebook-link":"https://www.facebook.com/arpandecores/",
+    "instagram_link":"https://www.instagram.com/arpandecores/?hl=en",
+    "email":"arpandecores@gmail.com",
+    "phone_number": "+91 7587144408",
     "open_all_days": "Open All Days",
     "opening_hours": "9:00 AM ~ 11:00 PM",
     "newsletter": "Newsletter",
@@ -118,6 +122,7 @@
   "Others": {
     "page_not_found": "Oops! Page Not Found!",
     "coming_soon": "Coming Soon!",
+    "no_data_found":"Oops! No Data Found!",
     "page_not_created_msg": "This page has not been created yet!",
     "go_back_to": "Go back to"
   },
@@ -148,6 +153,7 @@
     "woods" : "woods",
     "art" : "Art",
     "women": "Women",
+    "products": "Products",
     "bags": "Bags",
     "new-arrivals": "New Arrivals",
     "filter_by": "Filter by",
@@ -192,4 +198,5 @@
     "no_result": "No Result",
     "showing_results": "Showing {products} result(s)"
   }
+
 }

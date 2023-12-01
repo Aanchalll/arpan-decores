@@ -1,5 +1,5 @@
 .footerHead {
-  @apply text-gray400 text-lg mb-1 md:mb-3;
+  @apply  text-lg mb-1 md:mb-3;
 }
 
 .column {
@@ -16,7 +16,7 @@
 }
 
 .footerContainer {
-  @apply border-t-2 border-gray100 py-16;
+  @apply border-t-2 border-gray400 py-7 md:py-16;
 }
 
 .footerContents {
@@ -24,11 +24,11 @@
 }
 
 .footerContainer > div {
-  @apply mb-6 md:mb-0;
+  @apply md:mb-0;
 }
 
 .bottomFooter {
-  @apply border-2 py-1 text-xs border-gray200 text-gray400;
+  @apply border-2 py-1 text-xs border-gray400 text-gray400;
 }
 
 .bottomFooter a {

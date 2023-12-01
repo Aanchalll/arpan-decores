@@ -75,9 +75,6 @@ const Header: React.FC<Props> = ({ title }) => {
         {t("skip_to_main_content")}
       </a>
 
-      {/* ===== Top Navigation ===== */}
-      {/* <TopNav /> */}
-
       {/* ===== Main Navigation ===== */}
       <nav
         className={`${
@@ -98,7 +95,7 @@ const Header: React.FC<Props> = ({ title }) => {
               className={`flex-0 text-gold lg:flex-1 flex ${styles.leftMenu}`}
             >
               <li>
-                <Link href={`#`}>
+                <Link href={`/`}>
                   {/* <a>{t("men")}</a> */}
                   Arpan Decores
                 </Link>

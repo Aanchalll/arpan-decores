@@ -35,8 +35,9 @@
   @apply ml-12;
 }
 
-.rightMenu li:not(:last-child) {
+.rightMenu li {
   @apply hidden lg:block;
+  /* :not(:last-child) */
 }
 
 .rightMenu li:nth-child(3) {

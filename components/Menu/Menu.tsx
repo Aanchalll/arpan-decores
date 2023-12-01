@@ -83,23 +83,24 @@ export default function Menu() {
             >
               <div
                 style={{ height: "100vh" }}
-                className="relative opacity-95 overflow-y-auto inline-block dur h-screen w-full max-w-md overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl"
+                className="relative opacity-95 overflow-y-auto inline-block dur h-screen w-full max-w-md overflow-hidden text-left align-middle transition-all transform
+                 bg-gray500 shadow-xl"
               >
-                <div className="flex justify-between items-center p-6 pb-0">
+                <div className="flex justify-between items-center p-6 pb-8">
                   <Link href="/">
                     <a>
                       <Image
                         className="justify-center"
-                        src="/logo1.png"
+                        src="/logo-gold.png"
                         alt="Picture of the author"
-                        width={85}
-                        height={22}
+                        width={44}
+                        height={44}
                       />
                     </a>
                   </Link>
                   <button
                     type="button"
-                    className="outline-none focus:outline-none text-3xl sm:text-2xl"
+                    className=" text-silver outline-none focus:outline-none text-3xl sm:text-2xl"
                     onClick={closeModal}
                   >
                     &#10005;
@@ -108,7 +109,7 @@ export default function Menu() {
 
                 <div className="mb-10">
                   <div className="itemContainer px-6 w-full flex flex-col justify-around items-center">
-                    <form
+                    {/* <form
                       className="flex w-full justify-between items-center mt-5 mb-5 border-gray300 border-b-2"
                       onSubmit={handleSubmit}
                     >
@@ -119,16 +120,16 @@ export default function Menu() {
                         className="px-4 py-2 w-full focus:outline-none text-xl"
                         onChange={handleChange}
                       />
-                    </form>
-                    <Link href="/product-category/men">
+                    </form> */}
+                    <Link href="/product-category/products" > 
                       <a
-                        className="w-full text-xl hover:bg-gray100 text-left py-2"
+                        className="w-full text-xl text-silver  hover:bg-gray100 text-left py-2"
                         onClick={closeModal}
                       >
-                        {t("men")}
+                        {t("products")}
                       </a>
                     </Link>
-                    <Link href="/product-category/women">
+                    {/* <Link href="/product-category/women">
                       <a
                         className="w-full text-xl hover:bg-gray100 text-left py-2"
                         onClick={closeModal}
@@ -151,31 +152,31 @@ export default function Menu() {
                       >
                         {t("blogs")}
                       </a>
-                    </Link>
-                    <Link href="/about">
+                    </Link> */}
+                    <Link href="#about_us">
                       <a
-                        className="w-full text-xl hover:bg-gray100 text-left py-2"
+                        className="w-full text-xl text-silver hover:bg-gray100 text-left py-2"
                         onClick={closeModal}
                       >
                         {t("about_us")}
                       </a>
                     </Link>
-                    <Link href="/contact">
+                    {/* <Link href="/contact">
                       <a
-                        className="w-full text-xl hover:bg-gray100 text-left py-2"
+                        className="w-full text-xl text-silver hover:bg-gray100 text-left py-2"
                         onClick={closeModal}
                       >
                         {t("contact_us")}
                       </a>
-                    </Link>
-                    <hr className="border border-gray300 w-full mt-2" />
-                    <div className="w-full text-xl py-2 my-3 flex justify-between">
+                    </Link> */}
+                    <hr className="border border-gray400 w-full mt-2" />
+                    {/* <div className="w-full text-xl py-2 my-3 flex justify-between">
                       <AuthForm extraClass="flex justify-between w-full">
                         <span>{auth.user ? t("profile") : t("login")}</span>
                         <UserIcon />
                       </AuthForm>
-                    </div>
-                    <hr className="border border-gray300 w-full" />
+                    </div> */}
+                    {/* <hr className="border border-gray300 w-full" />
                     <Link href="/wishlist">
                       <a className="text-xl py-2 my-3 w-full flex justify-between">
                         <span>{t("wishlist")}</span>
@@ -191,10 +192,10 @@ export default function Menu() {
                         </div>
                       </a>
                     </Link>
-                    <hr className="border border-gray300 w-full" />
+                    <hr className="border border-gray300 w-full" /> */}
 
                     {/* Locale Dropdown */}
-                    <HMenu
+                    {/* <HMenu
                       as="div"
                       className="relative bg-gray100 mt-4 mb-2 w-full"
                     >
@@ -237,10 +238,10 @@ export default function Menu() {
                           </Link>
                         </HMenu.Item>
                       </HMenu.Items>
-                    </HMenu>
+                    </HMenu> */}
 
                     {/* Currency Dropdown */}
-                    <HMenu as="div" className="relative bg-gray100 my-2 w-full">
+                    {/* <HMenu as="div" className="relative bg-gray100 my-2 w-full">
                       <HMenu.Button
                         as="a"
                         href="#"
@@ -281,20 +282,22 @@ export default function Menu() {
                           )}
                         </HMenu.Item>
                       </HMenu.Items>
-                    </HMenu>
+                    </HMenu> */}
 
                     <div className="flex my-10 w-2/5 space-x-6 justify-center">
                       <a
-                        href="#"
-                        className="text-gray400 w-10 h-10 py-1 px-auto flex justify-center rounded-md active:bg-gray300"
-                        aria-label="Arpan Decores Facebook Page"
+                        href={t("facebook-link")}
+                        aria-label="Facebook Page for Arpan Decores"
+                        target="_blank"
+                        className="text-gray300 w-10 h-10 py-1 px-auto flex justify-center rounded-md active:bg-gray300"
                       >
                         <FacebookLogo extraClass="h-8" />
                       </a>
                       <a
-                        href="#"
-                        className="text-gray400 w-10 h-10 py-1 px-auto flex justify-center rounded-md active:bg-gray300"
-                        aria-label="Arpan Decores Facebook Page"
+                        href={t("instagram_link")}
+                        aria-label="Instagram Account for Arpan Decores"
+                        target="_blank"
+                        className="text-gray300 w-10 h-10 py-1 px-auto flex justify-center rounded-md active:bg-gray300"
                       >
                         <InstagramLogo extraClass="h-8" />
                       </a>
