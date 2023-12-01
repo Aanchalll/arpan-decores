@@ -64,6 +64,7 @@ export default function Footer() {
               href={t("facebook-link")}
               aria-label="Facebook Page for Arpan Decores"
               target="_blank"
+              rel="noreferrer"
             >
               <FacebookLogo />
             </a>
@@ -71,6 +72,7 @@ export default function Footer() {
               href={t("instagram_link")}
               aria-label="Instagram Account for Arpan Decores"
               target="_blank"
+              rel="noreferrer"
             >
               <InstagramLogo />
             </a>
