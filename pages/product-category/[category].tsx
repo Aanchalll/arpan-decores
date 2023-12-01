@@ -40,7 +40,7 @@ const ProductCategory: React.FC<Props> = ({
 
   const firstIndex = page === 1 ? page : page * 10 - 9;
   const lastIndex = page * 10;
-  console.log(category, "======", items);
+  // console.log(category, "======", items);
   return (
     <div>
       {/* ===== Head Section ===== */}
