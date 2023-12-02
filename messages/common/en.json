@@ -197,6 +197,15 @@
     "search_results": "Search results",
     "no_result": "No Result",
     "showing_results": "Showing {products} result(s)"
+  },
+  "Products": {
+    "section_1": [
+      "/bg-img/wood-lamp-shadow.jpeg",
+      "/bg-img/budhha-cuttingg.jpeg",
+      "/bg-img/partition.jpeg",
+      "/bg-img/buddha-cutting.webp",
+      "/bg-img/CNC-Cutting.webp"
+    ]
   }
 
 }
