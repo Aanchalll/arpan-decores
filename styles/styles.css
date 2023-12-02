@@ -1,6 +1,14 @@
 html {
   scroll-behavior: smooth;
-  background-color: #1e1c1c;
+  /* background-color: #1e1c1c; */
+    /* Set the background image */
+    background-image: url('/bg-img/galaxy.jpeg');
+    /* Set background size and other properties as needed */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    /* Optionally, you can set a background color as a fallback */
+    /* background-color: #f0f0f0; */
+    /* cursor: url('/bg-img/galaxy.jpeg'); */
 }
 
 .swiper-button-prev::after,

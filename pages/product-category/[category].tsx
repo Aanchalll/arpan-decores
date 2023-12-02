@@ -40,7 +40,11 @@ const ProductCategory: React.FC<Props> = ({
 
   const firstIndex = page === 1 ? page : page * 10 - 9;
   const lastIndex = page * 10;
-  // console.log(category, "======", items);
+
+  // const images = useTranslations("Products");
+
+  // console.log(images("showing_results"), "======",t('section_1'));
+
   return (
     <div>
       {/* ===== Head Section ===== */}
