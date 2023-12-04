@@ -12,7 +12,7 @@ import Card from "../../components/Card/Card";
 import { apiProductsType, itemType } from "../../context/cart/cart-types";
 import DownArrow from "../../public/icons/DownArrow";
 import NoDataFound from "../no-data";
-import { Products } from "../../messages/common/products";
+import { Products } from "../../messages/common/products.js";
 
 type OrderType = "latest" | "price" | "price-desc";
 
