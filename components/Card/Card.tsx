@@ -6,7 +6,7 @@ import styles from "./Card.module.css";
 import { itemType } from "../../context/cart/cart-types";
 
 type Props = {
-  item: itemType;
+  item: itemType | any;
 };
 
 const Card: FC<Props> = ({ item }) => {
