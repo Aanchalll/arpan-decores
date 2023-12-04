@@ -146,8 +146,7 @@ const Header: React.FC<Props> = ({ title }) => {
                 </Link>
               </li>
               <li className="text-gold">
-                {/* href={`/product-category/men`} */}
-                <Link href={`#products`}>
+                <Link href="/product-category/products">
                   <a>{t("products")}</a>
                 </Link>
               </li>

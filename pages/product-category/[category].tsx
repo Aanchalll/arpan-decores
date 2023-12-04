@@ -8,10 +8,11 @@ import { useTranslations } from "next-intl";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Card from "../../components/Card/Card";
-import Pagination from "../../components/Util/Pagination";
+// import Pagination from "../../components/Util/Pagination";
 import { apiProductsType, itemType } from "../../context/cart/cart-types";
 import DownArrow from "../../public/icons/DownArrow";
 import NoDataFound from "../no-data";
+import { Products } from "../../messages/common/products";
 
 type OrderType = "latest" | "price" | "price-desc";
 
@@ -23,7 +24,7 @@ type Props = {
 };
 
 const ProductCategory: React.FC<Props> = ({
-  items,
+  items = Products,
   page,
   numberOfProducts,
   orderby,
@@ -32,7 +33,7 @@ const ProductCategory: React.FC<Props> = ({
 
   const router = useRouter();
   const { category } = router.query;
-  const lastPage = Math.ceil(numberOfProducts / 10);
+  // const lastPage = Math.ceil(numberOfProducts / 10);
 
   const capitalizedCategory =
     category!.toString().charAt(0).toUpperCase() +
@@ -41,9 +42,7 @@ const ProductCategory: React.FC<Props> = ({
   const firstIndex = page === 1 ? page : page * 10 - 9;
   const lastIndex = page * 10;
 
-  // const images = useTranslations("Products");
-
-  // console.log(images("showing_results"), "======",t('section_1'));
+  // console.log(Products, "======");
 
   return (
     <div>
@@ -88,22 +87,23 @@ const ProductCategory: React.FC<Props> = ({
         {/* ===== Main Content Section ===== */}
         <div className="app-x-padding app-max-width mt-3 mb-14">
           {items ? (
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-4 gap-y-10 sm:gap-y-6 mb-10">
-              {items?.map((item) => (
-                <Card key={item.id} item={item} />
-              ))}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-10 sm:gap-y-6 mb-10">
+              {items?.map((item) => {
+                // console.log(item,'itenemhsbjchsdb')
+                return <Card key={item.id} item={item} />;
+              })}
             </div>
           ) : (
             <NoDataFound />
           )}
 
-          {category !== "new-arrivals" && items && items?.length > 0 && (
+          {/* {category !== "new-arrivals" && items && items?.length > 0 && (
             <Pagination
               currentPage={page}
               lastPage={lastPage}
               orderby={orderby}
             />
-          )}
+          )} */}
         </div>
       </main>
 
