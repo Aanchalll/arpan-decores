@@ -28,8 +28,8 @@ export type commonType = {
 };
 
 export interface itemType extends commonType {
-  img1?: string;
-  img2?: string;
+  img1?: string | any;
+  img2?: string| any;
   categoryName?: string;
 }
 

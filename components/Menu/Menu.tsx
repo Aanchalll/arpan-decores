@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import { Menu as HMenu } from "@headlessui/react";
+// import { Menu as HMenu } from "@headlessui/react";
 import Link from "next/link";
 import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
@@ -7,27 +7,27 @@ import { useTranslations } from "next-intl";
 import { useRouter } from "next/router";
 
 import MenuIcon from "../../public/icons/MenuIcon";
-import AuthForm from "../Auth/AuthForm";
-import WhistlistIcon from "../../public/icons/WhistlistIcon";
-import UserIcon from "../../public/icons/UserIcon";
-import SearchIcon from "../../public/icons/SearchIcon";
-import DownArrow from "../../public/icons/DownArrow";
+// import AuthForm from "../Auth/AuthForm";
+// import WhistlistIcon from "../../public/icons/WhistlistIcon";
+// import UserIcon from "../../public/icons/UserIcon";
+// import SearchIcon from "../../public/icons/SearchIcon";
+// import DownArrow from "../../public/icons/DownArrow";
 import InstagramLogo from "../../public/icons/InstagramLogo";
 import FacebookLogo from "../../public/icons/FacebookLogo";
-import { useWishlist } from "../../context/wishlist/WishlistProvider";
-import { useAuth } from "../../context/AuthContext";
+// import { useWishlist } from "../../context/wishlist/WishlistProvider";
+// import { useAuth } from "../../context/AuthContext";
 
 export default function Menu() {
   const t = useTranslations("Navigation");
-  const router = useRouter();
-  const { asPath, locale } = router;
-  const { wishlist } = useWishlist();
-  const auth = useAuth();
+  // const router = useRouter();
+  // const { asPath, locale } = router;
+  // const { wishlist } = useWishlist();
+  // const auth = useAuth();
   const [open, setOpen] = useState(false);
-  const [searchValue, setSearchValue] = useState("");
+  // const [searchValue, setSearchValue] = useState("");
 
   // Calculate Number of Wishlist
-  let noOfWishlist = wishlist.length;
+  // let noOfWishlist = wishlist.length;
 
   function closeModal() {
     setOpen(false);
@@ -37,15 +37,15 @@ export default function Menu() {
     setOpen(true);
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setOpen(false);
-    router.push(`/search?q=${searchValue}`);
-  };
+  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   setOpen(false);
+  //   router.push(`/search?q=${searchValue}`);
+  // };
 
-  const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
-    setSearchValue((e.target as HTMLInputElement).value);
-  };
+  // const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
+  //   setSearchValue((e.target as HTMLInputElement).value);
+  // };
 
   return (
     <>
