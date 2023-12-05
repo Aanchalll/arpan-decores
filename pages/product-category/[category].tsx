@@ -1,5 +1,4 @@
 import Link from "next/link";
-import axios from "axios";
 import { GetServerSideProps } from "next";
 import { useRouter } from "next/router";
 import { Menu } from "@headlessui/react";
@@ -12,7 +11,7 @@ import Card from "../../components/Card/Card";
 import { apiProductsType, itemType } from "../../context/cart/cart-types";
 import DownArrow from "../../public/icons/DownArrow";
 import NoDataFound from "../no-data";
-import { Products } from "../../messages/common/products";
+// import { Products } from "../../messages/common/product-items";
 
 type OrderType = "latest" | "price" | "price-desc";
 
@@ -252,3 +251,66 @@ const SortMenu: React.FC<{ orderby: OrderType }> = ({ orderby }) => {
 };
 
 export default ProductCategory;
+
+ const Products = [
+  {
+    id: 1,
+    img1: "/bg-img/wood-lamp-shadow.jpeg",
+    categoryName: "wood",
+    img2: "/bg-img/wood-lamp-shadow.jpeg",
+  },
+  {
+    id: 2,
+    img1: "/bg-img/budhha-cuttingg.jpeg",
+    categoryName: "wood",
+    img2: "/bg-img/budhha-cuttingg.jpeg",
+  },
+  {
+    id: 3,
+    img1: "/bg-img/partition.jpeg",
+    categoryName: "wood",
+    img2: "/bg-img/partition.jpeg",
+  },
+  {
+    id: 4,
+    img1: "/bg-img/shiv-mandir.jpeg",
+    categoryName: "wood",
+    img2: "/bg-img/shiv-mandir.jpeg",
+  },
+  // {
+  //   id: 5,
+  //   img1: "/bg-img/tiger-cnc.jpeg", 
+  //   categoryName: "wood",
+  //   img2: "/bg-img/tiger-cnc.jpeg",
+  // },
+  {
+    id: 6,
+    img1: "/bg-img/tiger-metal.jpg",
+    categoryName: "wood",
+    img2: "/bg-img/tiger-metal.jpg",
+  },
+  {
+    id: 7,
+    img1: "/bg-img/tree.jpeg",
+    categoryName: "wood",
+    img2: "/bg-img/tree.jpeg",
+  },
+  {
+    id: 8,
+    img1: "/bg-img/window-panels.jpeg",
+    categoryName: "wood",
+    img2: "/bg-img/window-panels.jpeg",
+  },
+  {
+    id: 9,
+    img1: "/bg-img/buddha-cutting.webp",
+    categoryName: "wood",
+    img2: "/bg-img/buddha-cutting.webp",
+  },
+  {
+    id: 10,
+    img1: "/bg-img/CNC-Cutting.webp",
+    categoryName: "wood",
+    img2: "/bg-img/CNC-Cutting.webp",
+  },
+];
