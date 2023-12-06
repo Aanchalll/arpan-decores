@@ -19,23 +19,23 @@ export default function Document() {
         <meta content="#282828" name="msapplication-TileColor" />
 
         <link
-          href="/favicons/ico.png"
+          href="/favicons/fav.ico"
           rel="apple-touch-icon"
           sizes="180x180"
         />
         <link
-          href="/favicons/ico.png"
+          href="/favicons/fav.ico"
           rel="icon"
           sizes="32x32"
           type="image/png"
         />
         <link
-          href="/favicons/ico.png"
+          href="/favicons/fav.ico"
           rel="icon"
           sizes="16x16"
           type="image/png"
         />
-        <link href="/favicons/ico.ico" rel="shortcut icon" />
+        <link href="/favicons/fav.ico" rel="shortcut icon" />
         <link href="/favicons/site.webmanifest" rel="manifest" />
 
         <meta property="og:url" content="https://haru-fashion.vercel.app" />
