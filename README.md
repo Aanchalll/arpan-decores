@@ -3,7 +3,7 @@ Arpan Decores website is developed with Next.JS and TypeScript. Tailwind CSS is 
 
 ## Features
 
-- Progressive Web App (PWA) 🔥
+- Progressive Web App (PWA) 
 - Responsive Design 📱💻
 - Different Category Page 🧑🏻👩🏻🎒
 - Pagination ⬅️➡️
@@ -19,3 +19,6 @@ Arpan Decores website is developed with Next.JS and TypeScript. Tailwind CSS is 
 **State Management** - ContextAPI   
 **Containerization:** Docker  
 **Deployment** Netlify
+
+## Performance
+<img width="890" alt="Screenshot 2023-12-21 at 6 25 55 PM" src="https://github.com/Aanchalll/arpan-decores/assets/81310029/41de6572-3433-44ba-8569-98357eacc16a">
