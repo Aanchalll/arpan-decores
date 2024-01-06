@@ -12,7 +12,7 @@ import {
   itemType,
 } from "../context/cart/cart-types";
 import LinkButton from "../components/Buttons/LinkButton";
-import ourShop from "../public/bg-img/partition-for-living-room.jpeg";
+import ourShop from "../public/logo-gold.png";
 
 type Props = {
   products: itemType[];
@@ -32,14 +32,14 @@ const Home: React.FC<Props> = ({ products }) => {
       {/* ===== Our Shop Intro Section */}
       <main id="about-us" className="-mt-20">
         <section className="app-max-width mt-16 mb-20 flex flex-col justify-center items-center text-center">
-          <div className="textBox w-3/4 md:w-2/4 lg:w-2/5 mb-6">
+          <div className="textBox w-3/4 md:w-2/4 lg:w-3/5 mb-6">
             {/* <h5 className="text-sm mb-1 text-silver translate-x-6">{t("arpan_decores")}</h5> */}
             <h2 className="text-3xl mb-6 text-gold italic translate-x-6">
-              {t("about_us")}
+              {t("who_are_we")}
             </h2>
             <span className="w-full text-silver">{t("our_shop_desc")}</span>
           </div>
-          <div className="w-full app-x-padding flex justify-center">
+          <div className="w-1/4 lg:w-1/6 app-x-padding flex justify-center">
             <Image src={ourShop} alt="Our Shop" />
           </div>
         </section>
@@ -63,12 +63,10 @@ const Home: React.FC<Props> = ({ products }) => {
                 imgAlt="New Arrivals"
               >
                 <LinkButton
-                  href="/product-category/new-arrivals"
+                  href="/products/interiors"
                   extraClass="absolute bottom-10-per sm:right-10-per z-20"
                 >
-                  {/* {t("new_arrivals")} */}
                   {t("interior_designs")}
-                  {/* Metals */}
                 </LinkButton>
               </OverlayContainer>
             </div>
@@ -78,28 +76,31 @@ const Home: React.FC<Props> = ({ products }) => {
                 imgAlt="Women Collection"
               >
                 <LinkButton
-                  href="/product-category/women"
+                  href="/products/engravings"
                   extraClass="absolute bottom-10-per z-20"
                 >
-                  {/* {t("women_collection")} */}
-                  Wood
+                  Engravings
                 </LinkButton>
               </OverlayContainer>
             </div>
             <div className="w-full">
               <OverlayContainer
                 imgSrc="/bg-img/partition-metal.jpeg"
-                imgAlt="Men Collection"
+                imgAlt="Lamps"
               >
                 <LinkButton
-                  href="/product-category/men"
+                  href="/products/lamps"
                   extraClass="absolute bottom-10-per z-20"
                 >
-                  {/* {t("men_collection")} */}
-                  Designs
+                  Lamps
                 </LinkButton>
               </OverlayContainer>
             </div>
+          </div>
+          <div className="textBox lg:w-full mt-6 text-center">
+            <LinkButton href="/product-category/products" extraClass="p-0">
+              See More
+            </LinkButton>
           </div>
         </section>
 

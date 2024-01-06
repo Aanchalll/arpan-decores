@@ -3,15 +3,13 @@ import { GetServerSideProps } from "next";
 import { useRouter } from "next/router";
 import { Menu } from "@headlessui/react";
 import { useTranslations } from "next-intl";
-
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import Card from "../../components/Card/Card";
-// import Pagination from "../../components/Util/Pagination";
-import { apiProductsType, itemType } from "../../context/cart/cart-types";
+import { itemType } from "../../context/cart/cart-types";
 import DownArrow from "../../public/icons/DownArrow";
 import NoDataFound from "../no-data";
-// import { Products } from "../../messages/common/product-items";
+import { product_categories } from "../../messages/common/constants";
+import CategoryCard from "./category-card";
 
 type OrderType = "latest" | "price" | "price-desc";
 
@@ -29,6 +27,7 @@ const ProductCategory: React.FC<Props> = ({
   orderby,
 }) => {
   const t = useTranslations("Category");
+  console.log(product_categories, "products_sub_categories");
 
   const router = useRouter();
   const { category } = router.query;
@@ -41,8 +40,6 @@ const ProductCategory: React.FC<Props> = ({
   const firstIndex = page === 1 ? page : page * 10 - 9;
   const lastIndex = page * 10;
 
-  // console.log(Products, "======");
-
   return (
     <div>
       {/* ===== Head Section ===== */}
@@ -52,11 +49,11 @@ const ProductCategory: React.FC<Props> = ({
         {/* ===== Breadcrumb Section ===== */}
         <div className=" text-silver h-16 w-full flex items-center">
           <div className="app-x-padding app-max-width w-full">
-            <div className="breadcrumb">
+            <div className="breadcrumb ">
               <Link href="/">
-                <a className=" text-silver">{t("home")}</a>
+                <a className="text-gray400">{t("home")}</a>
               </Link>{" "}
-              / <span className="capitalize ">{t(category as string)}</span>
+              / <span className="capitalize ">Products</span>
             </div>
           </div>
         </div>
@@ -64,7 +61,7 @@ const ProductCategory: React.FC<Props> = ({
         {/* ===== Heading & Filter Section ===== */}
         <div className="app-x-padding app-max-width w-full mt-8">
           <h3 className="text-4xl text-gold mb-2 capitalize">
-            {t(category as string)}
+          Products
           </h3>
           <div className="flex flex-col-reverse sm:flex-row gap-4 sm:gap-0 justify-between mt-4 sm:mt-6">
             {items && items?.length > 0 && (
@@ -85,24 +82,17 @@ const ProductCategory: React.FC<Props> = ({
 
         {/* ===== Main Content Section ===== */}
         <div className="app-x-padding app-max-width mt-3 mb-14">
-          {items ? (
+          {product_categories ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-10 sm:gap-y-6 mb-10">
-              {items?.map((item) => {
-                // console.log(item,'itenemhsbjchsdb')
-                return <Card key={item.id} item={item} />;
+              {product_categories?.map((item) => {
+                if (item?.products?.length > 0) {
+                  return <CategoryCard key={item.id} item={item} />;
+                } else return <></>;
               })}
             </div>
           ) : (
             <NoDataFound />
           )}
-
-          {/* {category !== "new-arrivals" && items && items?.length > 0 && (
-            <Pagination
-              currentPage={page}
-              lastPage={lastPage}
-              orderby={orderby}
-            />
-          )} */}
         </div>
       </main>
 
@@ -252,7 +242,7 @@ const SortMenu: React.FC<{ orderby: OrderType }> = ({ orderby }) => {
 
 export default ProductCategory;
 
- const Products = [
+const Products = [
   {
     id: 1,
     img1: "/bg-img/wood-lamp-shadow.jpeg",
@@ -279,7 +269,7 @@ export default ProductCategory;
   },
   // {
   //   id: 5,
-  //   img1: "/bg-img/tiger-cnc.jpeg", 
+  //   img1: "/bg-img/tiger-cnc.jpeg",
   //   categoryName: "wood",
   //   img2: "/bg-img/tiger-cnc.jpeg",
   // },

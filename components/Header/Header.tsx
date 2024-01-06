@@ -1,15 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
-import InstagramLogo from "../../public/icons/InstagramLogo";
-
-// import TopNav from "./TopNav";
-import WhistlistIcon from "../../public/icons/WhistlistIcon";
-import UserIcon from "../../public/icons/UserIcon";
-import AuthForm from "../Auth/AuthForm";
-import SearchForm from "../SearchForm/SearchForm";
-import CartItem from "../CartItem/CartItem";
 import Menu from "../Menu/Menu";
 import AppHeader from "./AppHeader";
 import { useWishlist } from "../../context/wishlist/WishlistProvider";
@@ -78,7 +69,7 @@ const Header: React.FC<Props> = ({ title }) => {
       {/* ===== Main Navigation ===== */}
       <nav
         className={`${
-          scrolled ? "bg-white sticky top-0 shadow-md z-50" : "bg-transparent"
+          scrolled ? " bg-opacity-75 bg-gray500 sticky top-0 shadow-md z-50" : "bg-transparent"
         } w-full z-50 h-20 relative`}
       >
         <div className="app-max-width w-full">
@@ -141,7 +132,7 @@ const Header: React.FC<Props> = ({ title }) => {
             <ul className={`flex-1 flex justify-end ${styles.rightMenu}`}>
               <li className="text-gold">
                 {/* href={`/product-category/men`} */}
-                <Link href={`#about-us`}>
+                <Link href={`/#about-us`}>
                   <a>{t("about_us")}</a>
                 </Link>
               </li>

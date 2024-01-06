@@ -142,7 +142,8 @@
     "our_shop": "Our Shop",
     "arpan_decores": "Arpan Decores",
     "about_us":"About Us",
-    "our_shop_desc": "Stop by our stores to learn the stories behind our products, get a personal styling session, or shop the latest in person. See our store locations.",
+    "who_are_we":"Who Are We?",
+    "our_shop_desc": "Inspired by a vision for personalized interiors, Arpan Decores was founded by Mridul Shrivastava. Now under the stewardship of Arpan Shrivastava, our unique touch lies in personalizing spaces, weaving individual stories into every design. Arpan Decores transforms spaces, making them a true reflection of your personality and style.",
     "our_products":"Our Products",
     "prod_desc": "Discover elegance in every detail. Explore our curated collection of exquisite doors, mirrors, pergolas, and more for your perfect interior transformation."
   },
@@ -199,13 +200,18 @@
     "showing_results": "Showing {products} result(s)"
   },
   "Products": {
-    "section_1": [
-      "/bg-img/wood-lamp-shadow.jpeg",
-      "/bg-img/budhha-cuttingg.jpeg",
-      "/bg-img/partition.jpeg",
-      "/bg-img/buddha-cutting.webp",
-      "/bg-img/CNC-Cutting.webp"
-    ]
+    "wall-arts":"Wall Arts",
+    "partitions":"Partitions",
+    "bbq":"BBQs",
+    "gates":"Gates",
+    "doors":"Doors",
+    "railings":"Railings",
+    "lamps":"Lamps",
+    "name-plate":"Name Plates",
+    "pergolas":"Pergolas",
+    "wood-cut-items":"Wood Cut Items",
+    "jwelries":"Jwelries",
+    "engraving":"Engravings"
   }
 
 }
