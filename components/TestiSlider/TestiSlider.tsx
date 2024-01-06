@@ -5,21 +5,21 @@ import RightArrow from "../../public/icons/RightArrow";
 const testi = [
   {
     speech:
-      "Lorem ipsum dolor sit, amet consectetur rro fuga minima necessitatibus repellendus. Veniam suscipit excepturi rem aliquam officiis.",
-    name: "David",
-    occupation: "Dhillon Owner",
+      "Arpan Decores transformed my hotel into a captivating dining space. Their keen eye for design and attention to detail created an ambiance that resonates with our customers.",
+    name: "",
+    occupation: "",
   },
   {
     speech:
-      "Nesciunt natus ullam iusto, maiores facere consectetur minima necessitatib adipisicing elit. Autem porro",
-    name: "Neymar",
-    occupation: "Athlete",
+      "Arpan Decores collaborates seamlessly, turning architectural visions into reality. Their innovative designs enhance the appeal of our constructions, reflecting a perfect blend of aesthetics and functionality.",
+    name: "",
+    occupation: "",
   },
   {
     speech:
-      "provident neque obcaecati, quo consequatur delectus s ullam iusto, maiores facere consecte",
-    name: "Ronaldo",
-    occupation: "Business Owner",
+      "Arpan Decores exceeded expectations, infusing charm into our event spaces. Their creativity and adaptability ensure each celebration is surrounded by an atmosphere of elegance and sophistication. Highly recommended!",
+    name: "",
+    occupation: "",
   },
 ];
 // animate__fadeIn
@@ -69,7 +69,8 @@ const TestiSlider: FC = () => {
                 <div className="textiContainer text-center w-3/4">
                   <span>{ti.speech}</span>
                   <h3 className="font-bold mt-6">{ti.name}</h3>
-                  <span className="text-sm">({ti.occupation})</span>
+                  <i className="fas fa-band-aid text-white"></i>
+                  <span className="text-sm">{ti.occupation? ti.occupation:''}</span>
                 </div>
               </div>
             )
