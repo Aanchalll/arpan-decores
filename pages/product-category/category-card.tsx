@@ -39,7 +39,7 @@ const CategoryCard: FC<Props> = ({ item }) => {
   const { name, products, id, category } = item;
   const sliderArray =
     products && products.length > 3 ? products?.slice(0, 3) : products;
-console.log(item,'item')
+  // console.log(item,'item')
   return (
     <div className={styles.card}>
       <div className={styles.imageContainer}>

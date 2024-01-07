@@ -27,7 +27,7 @@ const ProductCategory: React.FC<Props> = ({
   orderby,
 }) => {
   const t = useTranslations("Category");
-  console.log(product_categories, "products_sub_categories");
+  // console.log(product_categories, "products_sub_categories");
 
   const router = useRouter();
   const { category } = router.query;
@@ -60,9 +60,7 @@ const ProductCategory: React.FC<Props> = ({
 
         {/* ===== Heading & Filter Section ===== */}
         <div className="app-x-padding app-max-width w-full mt-8">
-          <h3 className="text-4xl text-gold mb-2 capitalize">
-          Products
-          </h3>
+          <h3 className="text-4xl text-gold mb-2 capitalize">Products</h3>
           <div className="flex flex-col-reverse sm:flex-row gap-4 sm:gap-0 justify-between mt-4 sm:mt-6">
             {items && items?.length > 0 && (
               <span>
