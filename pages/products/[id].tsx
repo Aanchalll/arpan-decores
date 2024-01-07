@@ -1,27 +1,12 @@
-import { useEffect, useState } from "react";
 import { GetServerSideProps } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { Disclosure } from "@headlessui/react";
 import { useTranslations } from "next-intl";
-import axios from "axios";
-
-import Heart from "../../public/icons/Heart";
-import DownArrow from "../../public/icons/DownArrow";
-import FacebookLogo from "../../public/icons/FacebookLogo";
-import InstagramLogo from "../../public/icons/InstagramLogo";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-
-// swiperjs
-import { Swiper, SwiperSlide } from "swiper/react";
 import { product_categories } from "../../messages/common/constants";
 // import Swiper core and required modules
 import SwiperCore, { Pagination } from "swiper/core";
-import { apiProductsType, itemType } from "../../context/cart/cart-types";
-import { useWishlist } from "../../context/wishlist/WishlistProvider";
-import { useCart } from "../../context/cart/CartProvider";
-import HeartSolid from "../../public/icons/HeartSolid";
 import NoDataFound from "../no-data";
 import { useRouter } from "next/router";
 
@@ -29,8 +14,6 @@ import { useRouter } from "next/router";
 SwiperCore.use([Pagination]);
 
 const Product = () => {
-  // const img1 = product.img1;
-  // const img2 = product.img2;
   const router = useRouter();
   const { id } = router.query;
 
@@ -40,13 +23,12 @@ const Product = () => {
     const array = product_categories?.filter(
       (category) => category?.category === targetId
     );
-    return array[0] ? array[0] : {};
+    return array[0] ? array[0] : { products: [], name: "" };
   }
 
   // Example usage: Get products with id = 3
-  const Product =id? filterProductsById(id):{};
-  const { products=[], name } = Product;
-  console.log(id, "===product====", Product, products);
+  const Product = filterProductsById(id);
+  const { products = [], name } = Product;
 
   return (
     <div>
@@ -63,9 +45,7 @@ const Product = () => {
               </Link>{" "}
               /{" "}
               <Link href={`/product-category/Products`}>
-                <a className="text-gray400 capitalize">
-                  Products
-                </a>
+                <a className="text-gray400 capitalize">Products</a>
               </Link>{" "}
               / <span>{name}</span>
             </div>
@@ -75,20 +55,22 @@ const Product = () => {
 
         <div className="app-x-padding app-max-width mt-3 mb-14">
           {products ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-4 gap-y-10 sm:gap-y-6 mb-10
+            <div
+              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-4 gap-y-10 sm:gap-y-6 mb-10
             
-            ">
-              {products?.map((item:any,index:any) => {
+            "
+            >
+              {products?.map((item: any, index: any) => {
                 return (
                   <div key={index} className="text-gold">
                     <Image
-                  layout="responsive"
-                  src={item.src}
-                  width={"100%"}
-                  height={"100%"}
-                  alt={item.name}
-                />
-                    </div>
+                      layout="responsive"
+                      src={item.src}
+                      width={"100%"}
+                      height={"100%"}
+                      alt={item.name}
+                    />
+                  </div>
                 );
               })}
             </div>
