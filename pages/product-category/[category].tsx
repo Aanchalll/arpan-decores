@@ -326,15 +326,12 @@ const CategoryCard: FC<Props2> = ({ item }) => {
   return (
     <div className={styles.card}>
       <div className={styles.imageContainer}>
-        <div className="text-silver text-4xl text-center relative top-3 z-30">
-          <a
-            href={`/products/${category}`}
-            // extraClass="absolute bottom-10-per sm:right-10-per z-20"
-          >
+        <a href={`/products/${category}`}>
+          <div className="text-silver text-4xl text-center relative top-3 z-30">
             {name}
-          </a>
-        </div>
-        <Slideshow name={name} products={sliderArray} />
+          </div>
+          <Slideshow name={name} products={sliderArray} />
+        </a>
       </div>
     </div>
   );
@@ -348,7 +345,7 @@ const Slideshow = ({ name = "", products = [] }) => {
     <>
       <div
         className="relative slide-container w-full h-full z-20  
-      overflow-hidden border-2 border-gray800 rounded-3xl "
+      overflow-hidden border-b-2 border-r-2 border-l-2 border-gray300 rounded-3xl "
       >
         <Swiper
           slidesPerView={1}
@@ -364,17 +361,14 @@ const Slideshow = ({ name = "", products = [] }) => {
         >
           {products?.map((slider: any) => (
             <SwiperSlide key={slider.id}>
-              <div
-                className=" 
-              lg:block 
-              "
-              >
+              <div className="lg:block imgContainer">
                 <Image
                   layout="responsive"
                   src={slider.src}
                   width={"100%"}
                   height={"100%"}
                   alt={name}
+                  priority
                 />
               </div>
               {/* <div className="hidden sm:block lg:hidden">

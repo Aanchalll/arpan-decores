@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
 import { useTranslations } from "next-intl";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 
 import MenuIcon from "../../public/icons/MenuIcon";
 // import AuthForm from "../Auth/AuthForm";

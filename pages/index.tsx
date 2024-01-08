@@ -40,7 +40,7 @@ const Home: React.FC<Props> = ({ products }) => {
             <span className="w-full text-silver">{t("our_shop_desc")}</span>
           </div>
           <div className="w-1/4 lg:w-1/6 app-x-padding flex justify-center">
-            <Image src={ourShop} alt="Our Shop" />
+            <Image src={ourShop} alt="Our Shop" priority/>
           </div>
         </section>
 

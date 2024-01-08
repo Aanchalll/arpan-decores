@@ -20,6 +20,7 @@ const OverlayContainer: FC<Props> = ({ imgSrc, imgSrc2, imgAlt, children }) => (
             width={858}
             height={414}
             layout="responsive"
+            priority
           />
         </div>
         <div className="block sm:hidden w-full">
@@ -30,6 +31,7 @@ const OverlayContainer: FC<Props> = ({ imgSrc, imgSrc2, imgAlt, children }) => (
             width={710}
             height={710}
             layout="responsive"
+            priority
           />
         </div>
       </>
@@ -40,6 +42,7 @@ const OverlayContainer: FC<Props> = ({ imgSrc, imgSrc2, imgAlt, children }) => (
         alt={imgAlt}
         width={710}
         height={710}
+        priority
       />
     )}
 
