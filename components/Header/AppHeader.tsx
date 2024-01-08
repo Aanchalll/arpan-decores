@@ -8,10 +8,9 @@ type Props = {
 };
 
 // "Arpan Decores"
-const defaultDesc =
-  "Arpan Decores: Experience magic with your Interiors ";
+const defaultDesc = "Arpan Decores: Inspired by a vision for personalized interiors, Arpan Decores was founded by Mridul Shrivastava. Now under the stewardship of Arpan Shrivastava, our unique touch lies in personalizing spaces, weaving individual stories into every design. Arpan Decores transforms spaces, making them a true reflection of your personality and style.";
 const defaultKeywords =
-  "Arpan Decores, Bhilai interior designing, bhilai, cnc cutting bhilai, customized gifts";
+  "Arpan Decores, bhilai, arpan bhilai, interior bhilai, interior designing ,Bhilai interior designing, bhilai, cnc cutting bhilai, customized gifts";
 
 const AppHeader: React.FC<Props> = ({
   title = "Arpan Decores",

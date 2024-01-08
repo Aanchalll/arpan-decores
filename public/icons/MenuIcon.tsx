@@ -4,7 +4,7 @@ const MenuIcon = ({ size = "md", extraClass = "" }) => (
     className="h-8 w-8 sm:h-6 sm:w-6"
     fill="none"
     viewBox="0 0 24 24"
-    stroke="currentColor"
+    stroke="azure"
   >
     <path
       strokeLinecap="round"
