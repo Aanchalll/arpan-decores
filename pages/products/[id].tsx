@@ -56,19 +56,18 @@ const Product = () => {
         <div className="app-x-padding app-max-width mt-3 mb-14">
           {products ? (
             <div
-              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-4 gap-y-10 sm:gap-y-6 mb-10
-            
-            "
+              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-4 gap-y-10 sm:gap-y-6 mb-10"
             >
               {products?.map((item: any, index: any) => {
                 return (
-                  <div key={index} className="text-gold">
+                  <div key={index} className="border-2 border-gray300 rounded-3xl overflow-hidden">
                     <Image
                       layout="responsive"
                       src={item.src}
                       width={"100%"}
                       height={"100%"}
                       alt={item.name}
+                      priority
                     />
                   </div>
                 );
