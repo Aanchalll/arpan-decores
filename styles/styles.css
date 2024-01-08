@@ -82,3 +82,14 @@ html {
   -webkit-background-clip: text; /* Clip text to the background */
   background-clip: text;
 }
+
+.image-box:hover{
+  img {
+  animation-name: example;
+  animation-duration: 4s;
+  }
+}
+@keyframes example {
+  from {transform: scale(1, 1);}
+  to {transform: scale(1.1, 1.1);}
+}
