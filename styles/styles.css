@@ -93,3 +93,51 @@ html {
   from {transform: scale(1, 1);}
   to {transform: scale(1.1, 1.1);}
 }
+
+.product-ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product-li{
+  height: 40vh;
+  flex-grow: 1;
+  margin: 5px;
+}
+.product-li:last-child {
+  flex-grow:  10;
+}
+.product-img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+  border-radius: 3px;
+  border: 0.5px #b9b0b0 solid;
+}
+@media (max-aspect-ratio: 1/1)  {
+  .product-li {
+    height: 30vh;
+  }
+}
+@media (max-height: 480px) {
+  .product-li {
+    height: 80vh;
+  }
+}
+
+
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+  .product-ul {
+    flex-direction: row;
+  }
+
+  .product-li {
+    height: auto;
+    width: 100%;
+  }
+  .product-img {
+    width: 100%;
+    max-height: 75vh;
+    min-width: 0;
+  }
+}

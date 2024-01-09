@@ -1,11 +1,9 @@
 import { GetServerSideProps } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { product_categories } from "../../messages/common/constants";
-// import Swiper core and required modules
 import SwiperCore, { Pagination } from "swiper/core";
 import NoDataFound from "../no-data";
 import { useRouter } from "next/router";
@@ -55,61 +53,29 @@ const Product = () => {
 
         <div className="app-x-padding app-max-width mt-3 mb-14">
           {products ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-4 gap-y-10 sm:gap-y-6 mb-10">
+            <ul className="product-ul">
               {products?.map((item: any, index: any) => {
                 return (
-                  <div
-                    key={index}
-                    className=" image-box border-2 border-gray300 rounded-3xl overflow-hidden"
-                  >
-                    <Image
-                      layout="responsive"
+                  <li className="product-li">
+                    <img
                       src={item.src}
                       width={"100%"}
                       height={"100%"}
                       alt={item.name}
-                      priority
+                      className="product-img"
                     />
-                  </div>
+                  </li>
                 );
               })}
-            </div>
+              <li className="product-li"></li>
+            </ul>
           ) : (
             <NoDataFound />
           )}
         </div>
+
         {/* ===== Horizontal Divider ===== */}
         <div className="border-b-2 border-gray200"></div>
-
-        {/* ===== You May Also Like Section ===== */}
-        {/* <div className="recSection my-8 app-max-width app-x-padding">
-          <h2 className="text-3xl mb-6">{t("you_may_also_like")}</h2>
-          <Swiper
-            slidesPerView={2}
-            // centeredSlides={true}
-            spaceBetween={10}
-            loop={true}
-            grabCursor={true}
-            pagination={{
-              clickable: true,
-              type: "bullets",
-            }}
-            className="mySwiper card-swiper sm:hidden"
-          >
-            {products.map((item) => (
-              <SwiperSlide key={item.id}>
-                <div className="mb-6">
-                  <Card key={item.id} item={item} />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className="hidden sm:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-x-4 gap-y-10 sm:gap-y-6 mb-10">
-            {products.map((item) => (
-              <Card key={item.id} item={item} />
-            ))}
-          </div>
-        </div> */}
       </main>
 
       {/* ===== Footer Section ===== */}
@@ -119,10 +85,10 @@ const Product = () => {
 };
 
 export const getServerSideProps: GetServerSideProps = async ({
-  params,
+  // params,
   locale,
 }) => {
-  const paramId = params!.id as string;
+  // const paramId = params!.id as string;
   // const res = await axios.get(
   //   `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/products/${paramId}?include=category`
   // );
