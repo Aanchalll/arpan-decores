@@ -56,7 +56,7 @@ const Product = () => {
             <ul className="product-ul">
               {products?.map((item: any, index: any) => {
                 return (
-                  <li className="product-li">
+                  <li key={index} className="product-li">
                     <img
                       src={item.src}
                       width={"100%"}
